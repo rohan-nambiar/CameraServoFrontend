@@ -15,7 +15,7 @@ const FeatureToggle: React.FC<FeatureToggleProps> = ({ feature, endpoint, variab
     const newValue = !isEnabled;
     setIsEnabled(newValue);
 
-    const url = `http://192.168.76.213/${endpoint}?var=${variable}&val=${newValue ? 1 : 0}`;
+    const url = `http://192.168.76.213/${endpoint}?state=${newValue ? 1 : 0}`;
 
     try {
       const response = await fetch(url, {

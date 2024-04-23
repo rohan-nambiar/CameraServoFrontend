@@ -16,7 +16,7 @@ function StartCamera() {
   };
   // Add more endpoints as necessary
   const toggles = [
-    { name: "XCLK Frequency", endpoint: "control", variable: "xclk" },
+    { name: "servo", endpoint: "toggle-gpio", variable: "state" },
     // { name: "Pixel Format", endpoint: "control", variable: "pixformat" },
     // { name: "Frame Size", endpoint: "control", variable: "framesize" },
     // { name: "Brightness", endpoint: "control", variable: "brightness" },
@@ -44,10 +44,10 @@ function StartCamera() {
   ];
 
   const sliders = [
-    { name: "Frame Rate", endpoint: "control", variable: "framerate", min: 1, max: 120 },
+    // { name: "Frame Rate", endpoint: "control", variable: "framerate", min: 1, max: 120 },
     { name: "Image Quality", endpoint: "control", variable: "quality", min: 4, max: 63 },
-    { name: "Automatic Exposure Control", endpoint: "control", variable: "aec", min: 0, max: 1200 },
-    { name: "Gain Ceiling", endpoint: "control", variable: "gainceiling", min: 2, max: 128 },
+    // { name: "Automatic Exposure Control", endpoint: "control", variable: "aec", min: 0, max: 1200 },
+    // { name: "Gain Ceiling", endpoint: "control", variable: "gainceiling", min: 2, max: 128 },
 
   ];
 
