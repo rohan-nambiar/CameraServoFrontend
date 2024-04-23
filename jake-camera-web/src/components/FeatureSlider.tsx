@@ -16,8 +16,7 @@ const FeatureSlider: React.FC<FeatureSliderProps> = ({ feature, endpoint, variab
   const handleSliderChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = parseInt(event.target.value, 10);
     setValue(newValue);
-
-    const url = `http://192.168.121.213/${endpoint}?var=${variable}&val=${newValue}`;
+    const url = `http://192.168.76.213/${endpoint}?var=${variable}&val=${newValue}`;
 
     try {
       const response = await fetch(url, {
