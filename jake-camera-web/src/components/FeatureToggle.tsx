@@ -14,7 +14,8 @@ const FeatureToggle: React.FC<FeatureToggleProps> = ({ feature, endpoint, variab
   const toggleFeature = async () => {
     const newValue = !isEnabled;
     setIsEnabled(newValue);
-
+    
+    //CHANGE THIS IF THE IP IS DIFFERENT
     const url = `http://192.168.76.213/${endpoint}?state=${newValue ? 1 : 0}`;
 
     try {
