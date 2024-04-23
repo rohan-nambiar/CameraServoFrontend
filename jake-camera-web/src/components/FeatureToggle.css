@@ -1,0 +1,75 @@
+
+.feature-switch-input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.feature-toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Adjust the space between each feature toggle as needed */
+}
+
+.feature-name {
+  color: #ffffff; /* This sets the label color to white */
+  flex-grow: 1; /* Ensures label takes up the required space */
+  margin-right: 20px; /* Adjust space between feature name and switch */
+  text-align: right; /* Align the text to the right, closer to the switch */
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+.feature-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Width of the switch */
+  height: 34px; /* Height of the switch */
+  margin-left: auto; /* This will push the switch to the end of the container */
+}
+
+.feature-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.feature-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.feature-switch-input:checked + .feature-slider {
+  background-color: #2196F3;
+}
+
+.feature-switch-input:focus + .feature-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.feature-switch-input:checked + .feature-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.feature-slider.round {
+  border-radius: 34px;
+}
+
+.feature-slider.round:before {
+  border-radius: 50%;
+}

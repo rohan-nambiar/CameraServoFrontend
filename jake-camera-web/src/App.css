@@ -1,10 +1,16 @@
 .App {
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #282c34;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+  margin-bottom: 2rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,18 +21,19 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  padding: 20px 0; /* This sets the padding at the top and bottom of the header */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
+
+.App-title {
+  font-size: calc(10px + 4vmin);
   color: #61dafb;
 }
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +43,23 @@
     transform: rotate(360deg);
   }
 }
+
+.App-link {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #61dafb;
+  color: #282c34;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.App-link:hover {
+  background-color: #5390d9;
+  transform: scale(1.05);
+}
+
+/* Additional styles for buttons on StartCamera page */
